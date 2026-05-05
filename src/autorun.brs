@@ -7,14 +7,17 @@ Sub Main()
     ' Full-screen rectangle at 1080p.
     rect = CreateObject("roRectangle", 0, 0, 1920, 1080)
 
-    config = CreateObject("roAssociativeArray")
-    config.port = msgPort
+    config = {
+        port: msgPort
+        nodejs_enabled: true
+        url: "file:///sd:/dist/index.html"
+        inspector_server: {
+            port: 2999
+        }
+    }
 
     html = CreateObject("roHtmlWidget", rect, config)
-    html.SetPort(msgPort)
-
-    ' Load the bundled app from the SD card root.
-    html.SetURL("file:///sd:/dist/index.html")
+    html.Show()
 
     ' Event loop — keep the process alive.
     While True
