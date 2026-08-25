@@ -3,9 +3,17 @@
 BrightSign HTML application used in the extension workshop. Runs on a BrightSign player
 alongside the Hello extension and displays its output on screen.
 
-This repo is used as a git submodule in
-[bs-extension-workshop](https://github.com/BrightSign-Playground/bs-extension-workshop)
-at `workshop/html-app/`.
+This is the HTML app used in
+[bs-workshop-extension](https://github.com/BrightDevelopers/bs-workshop-extension) — you clone it
+standalone in Module 9 (HTML App) of that workshop.
+
+> **Looking for a complete solution?**
+> [**Argus**](https://github.com/brightsign/argus-audience-measurement-extension) is BrightSign's
+> reference audience-measurement application: person counting, gaze detection, dwell time,
+> entry/exit events, and movement analytics, published over MQTT and Prometheus. This repository
+> is a single-purpose example of one piece of that system.
+>
+> *Argus is what a finished, real-world extension looks like once you know the workflow.*
 
 ---
 
@@ -66,7 +74,7 @@ Makefile          prep / build / publish / clean
 
 ## Debugging
 
-Open Chrome DevTools and navigate to `http://<player_ip>:2999` to inspect the running
+Open Chrome DevTools and navigate to `http://<PLAYER_IP>:2999` to inspect the running
 HTML app. SSH is also enabled on port 22.
 
 ---
